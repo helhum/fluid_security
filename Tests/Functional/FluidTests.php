@@ -26,8 +26,8 @@ class FluidTests extends FunctionalTestCase
             [
                 '{test}',
                 ['test' => '<strong>Foo</strong>'],
-                '&lt;strong&gt;Foo&lt;/strong&gt;',
-//                'json'
+                '<strong>Foo</strong>',
+                'json'
             ],
         ];
     }
