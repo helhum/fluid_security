@@ -24,9 +24,10 @@ class FluidTests extends FunctionalTestCase
     {
         return [
             [
-                '{test -> f:format.raw()}',
-                ['test' => "<strong>Foo</strong>"],
-                '<strong>Foo</strong>',
+                '{test}',
+                ['test' => '<strong>Foo</strong>'],
+                '&lt;strong&gt;Foo&lt;/strong&gt;',
+//                'json'
             ],
         ];
     }
