@@ -24,9 +24,9 @@ class FluidTests extends FunctionalTestCase
     {
         return [
             [
-                '<div id="js-access" data-test="{test}"></div>',
-                ['test' => "Hey & Ho';alert(123);//"],
-                '<div id="js-access" data-test="Hey &amp; Ho\';alert(123);//"></div>',
+                '<ft:escapingInterceptorEnabled>{test}</ft:escapingInterceptorEnabled>',
+                ['test' => "<strong>Foo</strong>"],
+                '???',
             ],
         ];
     }
