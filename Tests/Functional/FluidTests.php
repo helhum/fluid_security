@@ -24,10 +24,9 @@ class FluidTests extends FunctionalTestCase
     {
         return [
             [
-                '{test}',
-                ['test' => '<strong>Foo</strong>'],
-                '<strong>Foo</strong>',
-                'json'
+                '<ft:myHtmlMessage message="{message}"/>',
+                ['message' => 'This action was successful!'],
+                '<div class="message">This action was successful!</div>'
             ],
         ];
     }
