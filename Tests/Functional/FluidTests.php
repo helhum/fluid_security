@@ -8,6 +8,17 @@ class FluidTests extends FunctionalTestCase
 {
     protected $testExtensionsToLoad = ['typo3conf/ext/fluid_security'];
     protected $coreExtensionsToLoad = ['fluid'];
+    protected $configurationToUseInTestInstance = [
+        'SYS' => [
+            'caching' => [
+                'cacheConfigurations' => [
+                    'fluid_template' => array(
+                        'backend' => \TYPO3\CMS\Core\Cache\Backend\NullBackend::class,
+                    ),
+                ]
+            ]
+        ]
+    ];
 
     public function viewHelperTemplateSourcesDataProvider()
     {
@@ -15,7 +26,6 @@ class FluidTests extends FunctionalTestCase
             [
                 '{test}',
                 ['test' => '<strong>Bla</strong>'],
-                '<strong>Bla</strong>',
                 '&lt;strong&gt;Bla&lt;/strong&gt;',
             ],
         ];
