@@ -24,9 +24,9 @@ class FluidTests extends FunctionalTestCase
     {
         return [
             [
-                '{test}',
-                ['test' => '<strong>Bla</strong>'],
-                '&lt;strong&gt;Bla&lt;/strong&gt;',
+                '<script>{test}</script>',
+                ['test' => "var foo='bla';"],
+                "<script>???</script>",
             ],
         ];
     }
