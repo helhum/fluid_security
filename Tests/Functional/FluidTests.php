@@ -26,7 +26,7 @@ class FluidTests extends FunctionalTestCase
             [
                 '<ft:escapingInterceptorEnabled><ft:escapingInterceptorEnabled content="{test}" /></ft:escapingInterceptorEnabled>',
                 ['test' => "<strong>Foo</strong>"],
-                '???',
+                '<strong>Foo</strong>',
             ],
         ];
     }
